@@ -1,5 +1,7 @@
 struct stat;
 struct rtcdate;
+#include"../kernel/types.h"
+struct sysinfo;
 
 // system calls
 int fork(void);
@@ -23,6 +25,8 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int trace(int); //add trace declaration
+int sysinfo(struct sysinfo *); //add sysinfo declaration
 
 // ulib.c
 int stat(const char*, struct stat*);
